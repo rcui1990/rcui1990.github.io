@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruifeng (Richard) Cui, PHD</title>
+    <title>About Me - Ruifeng (Richard) Cui, PhD</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -42,32 +42,32 @@
         nav a.active {
             text-decoration: underline;
         }
-        .profile {
+        .bio-container {
             max-width: 800px;
             margin: 0 auto 50px;
-            display: flex;
-            align-items: flex-start;
+            padding: 0 20px;
         }
         .profile-img {
+            float: right;
             width: 200px;
             height: auto;
-            margin-right: 30px;
+            margin-left: 20px;
+            margin-bottom: 20px;
         }
-        .contact-info {
-            flex: 1;
+        .bio p {
+            font-size: 1em;
+            margin-bottom: 20px;
         }
-        .contact-info h2 {
-            font-size: 1.2em;
-            margin: 0 0 10px;
-        }
-        .contact-info p {
-            margin: 5px 0;
-            font-size: 0.9em;
-        }
-        .bio {
+        .hobbies-images {
+            display: flex;
+            justify-content: space-between;
             max-width: 800px;
             margin: 0 auto;
-            font-size: 1em;
+            padding: 0 20px;
+        }
+        .hobbies-images img {
+            width: 32%;
+            height: auto;
         }
     </style>
 </head>
@@ -77,23 +77,22 @@
             <h1><a href="index.html" style="text-decoration: none; color: inherit;">Ruifeng (Richard) Cui, PhD</a></h1>
         </header>
         <nav>
-            <a href="about.html">About Me</a>
+            <a href="about-me.html" class="active">About Me</a>
             <a href="research.html">Research</a>
             <a href="cv.pdf">CV</a>
         </nav>
     </div>
-    <section class="profile">
+    <section class="bio-container">
+        <div class="bio">
         <img src="PhotoView.jpg" alt="Ruifeng (Richard) Cui" class="profile-img">
-        <div class="contact-info">
-            <h2>Ruifeng (Richard) Cui, PhD, Grant Writer</h2>
-			<p>Department of Ophthalmology and Visual Sciences</p>
-			<p>Department of Otolaryngology-Head & Neck Surgery</p>
-            <p>West Virginia University Health Sciences</p>
-            <p><a href="mailto:rucui@hsc.wvu.edu">rucui@hsc.wvu.edu</a></p>
+            <p>Dr. Cui received his Bachelor of Science degree in Psychology from the University of California San Diego. He received his Masters of Science and Doctor of Philosophy degrees in Clinical Psychology from West Virginia University. He completed an internship at VA Milwaukee Healthcare System. He completed a postdoctoral Advanced Fellowship in Mental Illness Research and Treatment at VA Pittsburgh Healthcare System.</p>
+            <p>Dr. Cui joined the West Virginia University Research Corporation in 2023 as a Grant Writer and Editor. In this role, he provides research assistance to the Department of Ophthalmology and Visual Sciences and the Department of Otolaryngology/Head & Neck Surgery. He assists faculty and residents in writing, editing, and formatting manuscripts, posters, presentations, and grant applications. He also helps to code and clean datasets and conduct statistical analyses.</p>
         </div>
     </section>
-    <section class="bio">
-        <p>Ruifeng (Richard) Cui, PhD, is a grant writer in the Department of Ophthalmology and in the Department of Otolaryngology at the West Virginia University in Morgantown.</p>
+    <section class="hobbies-images">
+        <img src="LifeView.jpg" alt="LifeSciences">
+        <img src="RubyView.jpg" alt="RubyHospital">
+        <img src="WoodView.jpg" alt="Woodburn">
     </section>
 </body>
 </html>
