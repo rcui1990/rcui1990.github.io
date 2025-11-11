@@ -58,20 +58,18 @@
     <div id="message">Thanks for voting!</div>
   </div>
 
-  <script>
-    const scriptURL = https://script.google.com/macros/s/AKfycbyzjRwpf0Pclifok4URhPUDSNn00aAT1wctrwhRFL2ohRrYZW1Yf1Hyda4PqgmznP6o/exec; // ← replace with your Google Apps Script URL
+<script>
+  const scriptURL = "https://script.google.com/macros/s/AKfycbyzjRwpf0Pclifok4URhPUDSNn00aAT1wctrwhRFL2ohRrYZW1Yf1Hyda4PqgmznP6o/exec";
 
-    function sendVote(choice) {
-      fetch(scriptURL, {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ vote: choice })
-      });
-      const msg = document.getElementById("message");
-      msg.style.display = "block";
-      msg.textContent = "Thanks for voting for " + choice + "!";
-    }
-  </script>
+  function sendVote(choice) {
+    fetch(scriptURL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ vote: choice })
+    });
+    alert("Thanks for voting for " + choice + "!");
+  }
+</script>
 </body>
 </html>
