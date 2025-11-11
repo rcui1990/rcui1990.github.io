@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simple Poll</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: #f5f3ef;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .poll-box {
+      background: white;
+      padding: 2rem 3rem;
+      border-radius: 1rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+    h1 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      margin: 0.5rem;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    #message {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      color: #007bff;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="poll-box">
+    <h1>Which do you prefer?</h1>
+    <button onclick="sendVote('Option A')">Option A</button>
+    <button onclick="sendVote('Option B')">Option B</button>
+    <div id="message">Thanks for voting!</div>
+  </div>
+
+  <script>
+    const scriptURL = "YOUR_WEB_APP_URL_HERE"; // ← replace with your Google Apps Script URL
+
+    function sendVote(choice) {
+      fetch(scriptURL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ vote: choice })
+      });
+      const msg = document.getElementById("message");
+      msg.style.display = "block";
+      msg.textContent = "Thanks for voting for " + choice + "!";
+    }
+  </script>
+</body>
+</html>
